@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formation OBS Studio - De Zéro à Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon">OBS</div>
+      <span>Formation OBS Studio </span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>De Zéro à <span class="gradient">Pro</span> et les cours complets</h1>
+      <p>Maîtrise OBS Studio en 7 jours. Streaming, recording, scènes.</p>
+    </section>
+
+    <form id="obsForm" class="form-card" novalidate>
+      <div class="field">
+        <label for="nom">Nom complet *</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex: Amina Benali" required>
+        <span class="error" id="err-nom"></span>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="whatsapp">WhatsApp *</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+243 8XX XXX XXX" required>
+          <span class="error" id="err-whatsapp"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="amina@email.com" required>
+          <span class="error" id="err-email"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="ville">Ville *</label>
+          <input type="text" id="ville" name="ville" placeholder="Kinshasa" required>
+          <span class="error" id="err-ville"></span>
+        </div>
+        <div class="field">
+          <label for="niveau">Ton niveau actuel *</label>
+          <select id="niveau" name="niveau" required>
+            <option value="">Choisir...</option>
+            <option value="debutant">Débutant - Jamais utilisé OBS</option>
+            <option value="intermediaire">Intermédiaire - Bases acquises</option>
+            <option value="avance">Avancé - Je stream déjà</option>
+            <option value="formateur">Futur formateur</option>
+            <option value="formateur">je prépare mon studion</option>
+          </select>
+          <span class="error" id="err-niveau"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Objectif principal * (1 à 3)</label>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="objectifs" value="streaming"> Streaming</label>
+          <label><input type="checkbox" name="objectifs" value="tuto"> Tutoriels</label>
+          <label><input type="checkbox" name="objectifs" value="podcast"> Podcast</label>
+          <label><input type="checkbox" name="objectifs" value="live"> Montage live</label>
+          <label><input type="checkbox" name="objectifs" value="conf"> Conférences</label>
+        </div>
+        <span class="error" id="err-objectifs"></span>
+      </div>
+
+      <div class="field">
+        <label>Disponibilités *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="dispo" value="matin" required> Semaine matin (9h-12h)</label>
+          <label><input type="radio" name="dispo" value="soir" required> Semaine soir (19h-22h)</label>
+          <label><input type="radio" name="dispo" value="weekend" required> Week-end intensif</label>
+        </div>
+        <span class="error" id="err-dispo"></span>
+      </div>
+
+      <div class="field">
+        <label for="message">Ton projet avec OBS ?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ex: Je veux lancer une chaîne YouTube gaming..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" id="submitBtn">
+        S'inscrire à la formation →
+      </button>
+      <p class="legal">Envoi sécurisé. Réponse sous 24h sur WhatsApp.</p>
+    </form>
+
+    <div id="successBox" class="success hidden">
+      <h3>✅ Inscription envoyée !</h3>
+      <p>On te contacte sur WhatsApp très vite.</p>
+      <div class="share-link">
+        <span id="shareUrl"></span>
+        <button onclick="copyLink()">Copier</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+      <a href="admin.html" style="color:#2a2a44;font-size:10px">admin</a>
+</body>
+</html>
